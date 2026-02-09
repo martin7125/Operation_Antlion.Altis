@@ -1,0 +1,5 @@
+respawn = 0;
+respawnDelay = 60;
+
+showGPS = 0;
+disabledAI = 1;
