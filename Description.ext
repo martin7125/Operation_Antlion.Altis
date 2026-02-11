@@ -1,4 +1,4 @@
-respawn = 0;
+respawn = 1;
 respawnDelay = 60;
 
 showGPS = 0;

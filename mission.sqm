@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=619;
+		nextID=718;
 	};
 	class MarkerIDProvider
 	{
@@ -24,17 +24,18 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3403.1782,11.080223,11712.376};
-		dir[]={0.06509804,-0.61165631,0.78844076};
-		up[]={0.050330479,0.79112369,0.60958213};
-		aside[]={0.99660885,0,-0.082285553};
+		pos[]={3403.2859,16.698956,11697.755};
+		dir[]={0.0055395141,-0.57648957,0.81708574};
+		up[]={0.0039082784,0.81710452,0.57647634};
+		aside[]={0.99997699,2.3283064e-10,-0.0067794435};
 	};
 };
 binarizationWanted=0;
-sourceName="Operation_Antlion";
+sourceName="operation_antlion";
 addons[]=
 {
 	"A3_Ui_F",
+	"rhs_c_weapons",
 	"A3_Characters_F",
 	"A3_Characters_F_Mark",
 	"ace_explosives"
@@ -43,7 +44,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -53,19 +54,26 @@ class AddonsMetaData
 		};
 		class Item1
 		{
+			className="rhs_c_weapons";
+			name="AFRF Weapons Pack";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item2
+		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
+		class Item3
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item3
+		class Item4
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
@@ -107,7 +115,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			dataType="Marker";
@@ -296,6 +304,51 @@ class Mission
 		};
 		class Item8
 		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3405.3071,3.6215391,11721.621};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=619;
+			type="rhs_7ya37_1_single";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_virtualArsenal";
+					expression="if (!is3DEN && _value) then {['AmmoboxInit', [_this, true]] spawn BIS_fnc_arsenal}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[""B_UavTerminal""],[1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item9
+		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -319,7 +372,7 @@ class Mission
 						{
 						};
 					};
-					id=608;
+					id=707;
 					type="B_officer_F";
 					atlOffset=0.11500001;
 					class CustomAttributes
@@ -370,7 +423,7 @@ class Mission
 						{
 						};
 					};
-					id=609;
+					id=708;
 					type="B_officer_F";
 					class CustomAttributes
 					{
@@ -407,22 +460,22 @@ class Mission
 			class Attributes
 			{
 			};
-			id=607;
+			id=706;
 			atlOffset=0.11500001;
 		};
-		class Item9
+		class Item10
 		{
 			dataType="Group";
 			side="West";
 			class Entities
 			{
-				items=7;
+				items=8;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3409.8921,3.4943192,11718.477};
+						position[]={3407.4211,3.4913919,11719.376};
 					};
 					side="West";
 					flags=7;
@@ -434,8 +487,9 @@ class Mission
 						{
 						};
 					};
-					id=611;
+					id=710;
 					type="B_Soldier_SL_F";
+					atlOffset=0.056347847;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -484,7 +538,7 @@ class Mission
 						{
 						};
 					};
-					id=612;
+					id=711;
 					type="B_soldier_AR_F";
 					class CustomAttributes
 					{
@@ -534,7 +588,7 @@ class Mission
 						{
 						};
 					};
-					id=613;
+					id=712;
 					type="B_HeavyGunner_F";
 					class CustomAttributes
 					{
@@ -584,7 +638,7 @@ class Mission
 						{
 						};
 					};
-					id=614;
+					id=713;
 					type="B_Soldier_GL_F";
 					class CustomAttributes
 					{
@@ -634,7 +688,7 @@ class Mission
 						{
 						};
 					};
-					id=615;
+					id=714;
 					type="B_soldier_exp_F";
 					class CustomAttributes
 					{
@@ -672,19 +726,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3401.5569,2.907186,11713.151};
+						position[]={3402.0129,2.9302342,11713.441};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
-						description="Scout";
+						description="Specialist";
 						isPlayable=1;
 						class Inventory
 						{
 						};
 					};
-					id=616;
+					id=715;
 					type="B_Sharpshooter_F";
 					atlOffset=2.3841858e-07;
 					class CustomAttributes
@@ -723,6 +777,57 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+						position[]={3403.8894,2.9186122,11713.545};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Scout";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=716;
+					type="B_Sharpshooter_F";
+					atlOffset=-0.070117235;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
 						position[]={3406.9131,3.0361669,11712.537};
 					};
 					side="West";
@@ -735,7 +840,7 @@ class Mission
 						{
 						};
 					};
-					id=617;
+					id=717;
 					type="B_medic_F";
 					class CustomAttributes
 					{
@@ -772,7 +877,8 @@ class Mission
 			class Attributes
 			{
 			};
-			id=610;
+			id=709;
+			atlOffset=0.056347847;
 			class CustomAttributes
 			{
 				class Attribute0
