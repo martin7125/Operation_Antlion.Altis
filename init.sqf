@@ -28,6 +28,30 @@ mono = 0;
 intensity = 0.1;
 
 player addBackpack "B_AssaultPack_ocamo";
+player linkItem "itemmap";
+
+missionNamespace setVariable ["#EM_FMin", 0];
+missionNamespace setVariable ["#EM_FMax", 1000];
+
+missionNamespace setVariable ["#EM_SMin", 0];
+missionNamespace setVariable ["#EM_SMax", 50];
+
+ballsy = true;
+
+signalFalloffRange = 100; //Range at which signal strength will start to decrease
+
+[] spawn {
+  while {ballsy} do {
+    directionMod = abs ((player getRelDir balls) - 180) / 180; 
+
+    range = player distance balls;
+
+    rangeMod = 1 / (1.001 ^ (range - signalFalloffRange));
+    rangeMod = 0 max 1 min rangeMod;
+
+    missionNamespace setVariable ["#EM_Values", [250, 50 * directionMod * rangeMod]];
+  };
+};
 
 while {true} do {
   if (getConnectedUAV player isEqualTo objNull && !(isRemoteControlling player)) then {_ppGrain ppEffectEnable false; 0 fadesound 1; continue};
@@ -41,9 +65,3 @@ while {true} do {
 
   sleep 0.001;
 };
-
-strength = abs ((player getRelDir balls) - 180) / 180; strength2 = abs ((player getRelDir balls2) - 180) / 180; strength3 = abs ((player getRelDir balls3) - 180) / 180; [strength, strength2, strength3]
-
-missionNamespace setVariable ["#EM_Values", [250, -30 * 1/strength, 150, -50 * 1/strength2, 775, -40 * 1/strength3]];
-
-strength = abs ((player getRelDir balls) - 180) / 180; strength2 = abs ((player getRelDir balls2) - 180) / 180; strength3 = abs ((player getRelDir balls3) - 180) / 180;

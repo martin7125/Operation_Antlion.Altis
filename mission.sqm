@@ -12,11 +12,11 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=718;
+		nextID=724;
 	};
 	class MarkerIDProvider
 	{
-		nextID=16;
+		nextID=19;
 	};
 	class LayerIndexProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3403.2859,16.698956,11697.755};
-		dir[]={0.0055395141,-0.57648957,0.81708574};
-		up[]={0.0039082784,0.81710452,0.57647634};
-		aside[]={0.99997699,2.3283064e-10,-0.0067794435};
+		pos[]={3407.7878,18.094751,11705.261};
+		dir[]={-0.028514642,-0.66491145,0.74639314};
+		up[]={-0.025382904,0.74692327,0.66442865};
+		aside[]={0.99928594,6.1410537e-07,0.038173951};
 	};
 };
 binarizationWanted=0;
@@ -38,13 +38,14 @@ addons[]=
 	"rhs_c_weapons",
 	"A3_Characters_F",
 	"A3_Characters_F_Mark",
-	"ace_explosives"
+	"ace_explosives",
+	"A3_Props_F_Enoch_Military_Camps"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -80,11 +81,19 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
+		class Item5
+		{
+			className="A3_Props_F_Enoch";
+			name="Arma 3 Contact Platform - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
 {
-	"Mark"
+	"Mark",
+	"Expansion"
 };
 randomSeed=16604087;
 class ScenarioData
@@ -115,7 +124,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=11;
+		items=17;
 		class Item0
 		{
 			dataType="Marker";
@@ -340,7 +349,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[[[[],[]],[[],[]],[[""B_UavTerminal""],[1]],[[],[]]],false]";
+							value="[[[[""hgun_esd_01_antenna_02_F""],[1]],[[],[]],[[""B_UavTerminal""],[1]],[[],[]]],false]";
 						};
 					};
 				};
@@ -896,6 +905,80 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3401.7852,17.765226,11856.389};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="balls";
+			};
+			id=718;
+			type="SatelliteAntenna_01_Black_F";
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3823.2725,11.169274,11463.936};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="balls2";
+			};
+			id=719;
+			type="SatelliteAntenna_01_Black_F";
+			atlOffset=-0.0050001144;
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4170.4429,53.335701,11796.271};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="balls3";
+			};
+			id=720;
+			type="SatelliteAntenna_01_Black_F";
+			atlOffset=-0.019001007;
+		};
+		class Item14
+		{
+			dataType="Marker";
+			position[]={3821.856,9.7917576,11452.069};
+			name="marker_16";
+			type="mil_flag";
+			id=721;
+		};
+		class Item15
+		{
+			dataType="Marker";
+			position[]={3403.8982,16.519642,11854.589};
+			name="marker_17";
+			type="mil_flag";
+			id=722;
+		};
+		class Item16
+		{
+			dataType="Marker";
+			position[]={4173.6465,52.687286,11793.937};
+			name="marker_18";
+			type="mil_flag";
+			id=723;
 		};
 	};
 };
