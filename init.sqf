@@ -42,11 +42,11 @@ signalFalloffRange = 100; //Range at which signal strength will start to decreas
 
 [] spawn {
   while {ballsy} do {
-    directionMod = abs ((player getRelDir balls) - 180) / 180; 
+    directionMod = (abs ((player getRelDir balls) - 180) / 180) ^ 4; //Exponential direction modifier
 
     range = player distance balls;
 
-    rangeMod = 1 / (1.001 ^ (range - signalFalloffRange));
+    rangeMod = 1 / (1.0006 ^ (range - signalFalloffRange));
     rangeMod = 0 max 1 min rangeMod;
 
     missionNamespace setVariable ["#EM_Values", [250, 50 * directionMod * rangeMod]];
@@ -60,7 +60,7 @@ while {true} do {
   _ppGrain ppEffectEnable true;
 
   _distance = getConnectedUAV player distance player;
-  _ppGrain ppEffectAdjust [1.0075 ^ (_distance-grainMaxDistance), sharpness, grainsize, int1, int2, mono];
+  _ppGrain ppEffectAdjust [1.0075 ^ (_distance - grainMaxDistance), sharpness, grainsize, int1, int2, mono];
   _ppGrain ppEffectCommit 0;
 
   sleep 0.001;
