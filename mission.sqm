@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=725;
+		nextID=742;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3409.6023,39.987167,11674.765};
-		dir[]={-0.028514642,-0.66491145,0.74639314};
-		up[]={-0.025382904,0.74692327,0.66442865};
-		aside[]={0.99928594,6.1410537e-07,0.038173951};
+		pos[]={3410.3472,30.35643,11680.935};
+		dir[]={-0.059966445,-0.50332546,0.86201376};
+		up[]={-0.034929693,0.86409688,0.50211203};
+		aside[]={0.99758917,1.8626451e-09,0.069397822};
 	};
 };
 binarizationWanted=0;
@@ -40,7 +40,8 @@ addons[]=
 	"A3_Characters_F_Mark",
 	"ace_explosives",
 	"A3_Props_F_Enoch_Military_Camps",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"A3_Props_F_Enoch_Military_Equipment"
 };
 class AddonsMetaData
 {
@@ -101,7 +102,8 @@ class AddonsMetaData
 dlcs[]=
 {
 	"Mark",
-	"Expansion"
+	"Expansion",
+	"Contact"
 };
 randomSeed=16604087;
 class ScenarioData
@@ -132,7 +134,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=18;
+		items=19;
 		class Item0
 		{
 			dataType="Marker";
@@ -1053,6 +1055,22 @@ class Mission
 				};
 				nAttributes=4;
 			};
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3424.0537,6.1766958,11726.063};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=741;
+			type="OmniDirectionalAntenna_01_black_F";
+			atlOffset=-3.8146973e-06;
 		};
 	};
 };

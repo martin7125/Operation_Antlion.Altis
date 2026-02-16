@@ -15,10 +15,10 @@ _text = format ["<t align='center' size='1.2' font='PuristaBold' color='#ffffff'
 
 call BIS_fnc_showMissionStatus;
 
-_ppGrain = ppEffectCreate ["filmGrain", 4398725];
+_ppGrain = ppEffectCreate ["filmGrain", 939872053];
 _ppGrain ppEffectEnable true;
 
-grainMaxDistance = 300;
+grainMaxDistance = 400;
 
 sharpness = 0.2;
 grainsize = 1.5;
@@ -31,27 +31,14 @@ player addBackpack "B_AssaultPack_ocamo";
 player linkItem "itemmap";
 
 missionNamespace setVariable ["#EM_FMin", 0];
-missionNamespace setVariable ["#EM_FMax", 1000];
+missionNamespace setVariable ["#EM_FMax", 600];
 
 missionNamespace setVariable ["#EM_SMin", 0];
 missionNamespace setVariable ["#EM_SMax", 50];
 
-ballsy = true;
-
-signalFalloffRange = 100; //Range at which signal strength will start to decrease
-
-[] spawn {
-  while {ballsy} do {
-    directionMod = (abs ((player getRelDir balls) - 180) / 180) ^ 4; //Exponential direction modifier
-
-    range = player distance balls;
-
-    rangeMod = 1 / (1.0006 ^ (range - signalFalloffRange));
-    rangeMod = 0 max 1 min rangeMod;
-
-    missionNamespace setVariable ["#EM_Values", [250, 50 * directionMod * rangeMod]];
-  };
-};
+//Scroll increment seems to always be 0.03 of EM_FMax
+missionNamespace setVariable ["#EM_SelMin", 0];
+missionNamespace setVariable ["#EM_SelMax", 18];
 
 while {true} do {
   if (getConnectedUAV player isEqualTo objNull && !(isRemoteControlling player)) then {_ppGrain ppEffectEnable false; 0 fadesound 1; continue};
