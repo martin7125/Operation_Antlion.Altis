@@ -17,6 +17,7 @@ getFrequency = {
 
 signalFalloffRange = 100; //Range at which signal strength will start to decrease (m)
 signalStrength = 50; //Maximum signal strength (db)
+signalMaxRange = 3000; //Range at which signal strength will be 0
 
 [] spawn {
   waitUntil {player == player};
@@ -26,7 +27,8 @@ signalStrength = 50; //Maximum signal strength (db)
 
     range = player distance balls;
 
-    rangeMod = 1 / (1.0008 ^ (range - signalFalloffRange));
+    //rangeMod = 1 / (1.0008 ^ (range - signalFalloffRange)); //exponential decrease
+    rangeMod = -(range / signalMaxRange) + 1; //linear decrease
     rangeMod = 0 max 1 min rangeMod;
 
     missionNamespace setVariable ["#EM_Values", [call getFrequency, signalStrength * directionMod * rangeMod]];
