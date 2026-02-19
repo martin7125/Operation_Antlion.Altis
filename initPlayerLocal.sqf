@@ -1,3 +1,7 @@
+//ew_signalFalloffRange = 100; //Range at which signal strength will start to decrease (m)
+ew_signalStrength = 50; //Maximum signal strength (db)
+ew_signalMaxRange = 3000; //Range at which signal strength will be 0 (m)
+
 playerUsingRadio = {
   !(tfar_core_currentTransmittingRadio isEqualTo [])
 };
@@ -15,24 +19,39 @@ getFrequency = {
   parseNumber _currentFrequency
 };
 
-signalFalloffRange = 100; //Range at which signal strength will start to decrease (m)
-signalStrength = 50; //Maximum signal strength (db)
-signalMaxRange = 3000; //Range at which signal strength will be 0
+getSignalStrength = {
+  params ["_object"];
 
-[] spawn {
-  waitUntil {player == player};
+  _range = player distance _object;
 
-  while {true} do {
-    directionMod = (abs ((player getRelDir balls) - 180) / 180) ^ 4; //Exponential direction modifier
+  if (_range > ew_signalMaxRange) exitWith {};
 
-    range = player distance balls;
+  _directionMod = (abs ((player getRelDir _object) - 180) / 180) ^ 4;
 
-    //rangeMod = 1 / (1.0008 ^ (range - signalFalloffRange)); //exponential decrease
-    rangeMod = -(range / signalMaxRange) + 1; //linear decrease
-    rangeMod = 0 max 1 min rangeMod;
+  _rangeMod = -(_range / ew_signalMaxRange) + 1;
+  _rangeMod = 0 max 1 min _rangeMod;
 
-    missionNamespace setVariable ["#EM_Values", [call getFrequency, signalStrength * directionMod * rangeMod]];
-
-    sleep 0.001;
-  };
+  ew_signalStrength * _directionMod * _rangeMod
 };
+
+/*1 / (1.0008 ^ (range - ew_signalFalloffRange)); //exponential decrease*/
+
+ew_objects = [[balls, 250], [balls2, 350], [balls3, 550]];
+ew_array = [];
+
+[{
+  ew_array = [];
+
+  {
+    private _object = _x select 0;
+    private _frequency = _x select 1;
+    private _signalStrength = _object call getSignalStrength;
+
+    if (isNil "_signalStrength") then {continue};
+
+    ew_array pushBack _frequency;
+    ew_array pushBack _signalStrength;
+  } forEach ew_objects;
+
+  missionNamespace setVariable ["#EM_Values", ew_array];
+}] call CBA_fnc_addPerFrameHandler;
