@@ -3,3 +3,14 @@ respawnDelay = 60;
 
 showGPS = 0;
 disabledAI = 1;
+
+class cfgFunctions {
+    class EW {
+        class EW {
+            class addTogglePFH {};
+            class spectrumDisplay {};
+            class getSignalStrength {};
+            class init {};
+        };
+    };
+};

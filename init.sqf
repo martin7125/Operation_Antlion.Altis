@@ -30,16 +30,6 @@ intensity = 0.1;
 player addBackpack "B_AssaultPack_ocamo";
 player linkItem "itemmap";
 
-missionNamespace setVariable ["#EM_FMin", 0];
-missionNamespace setVariable ["#EM_FMax", 600];
-
-missionNamespace setVariable ["#EM_SMin", 0];
-missionNamespace setVariable ["#EM_SMax", 50];
-
-//Scroll increment seems to always be 0.03 of EM_FMax
-missionNamespace setVariable ["#EM_SelMin", 0];
-missionNamespace setVariable ["#EM_SelMax", 18];
-
 while {true} do {
   if (getConnectedUAV player isEqualTo objNull && !(isRemoteControlling player)) then {_ppGrain ppEffectEnable false; 0 fadesound 1; continue};
 
