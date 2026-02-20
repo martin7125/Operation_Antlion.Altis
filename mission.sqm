@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=742;
+		nextID=743;
 	};
 	class MarkerIDProvider
 	{
@@ -24,14 +24,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3419.8757,24.027405,11685.01};
-		dir[]={-0.29047817,-0.43879312,0.85034293};
-		up[]={-0.14184454,0.89858806,0.4152343};
-		aside[]={0.94630992,7.4505806e-09,0.32326064};
+		pos[]={3412.0161,17.935074,11694.091};
+		dir[]={0.23677918,-0.5740692,0.78382421};
+		up[]={0.16600695,0.81880671,0.54954273};
+		aside[]={0.95727611,1.4901161e-08,-0.28917587};
 	};
 };
 binarizationWanted=0;
-sourceName="Operation_Antlion";
+sourceName="operation_antlion";
 addons[]=
 {
 	"A3_Ui_F",

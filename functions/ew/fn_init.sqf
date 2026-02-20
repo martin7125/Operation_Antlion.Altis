@@ -1,3 +1,8 @@
+ew_signalStrengthLR = 47; //Strength of LR radio (db)
+ew_signalStrengthSW = 37; //Strength of SW radio (db)
+ew_signalMaxRange = 5000; //Range at which signal strength will be 0 - follows a linear falloff (m)
+ew_usingSpectrum = false;
+
 missionNamespace setVariable ["#EM_FMin", 0];
 missionNamespace setVariable ["#EM_FMax", 600];
 

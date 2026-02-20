@@ -1,8 +1,3 @@
-ew_signalStrengthLR = 47;
-ew_signalStrengthSW = 37;
-ew_signalMaxRange = 3000; //Range at which signal strength will be 0 (m)
-ew_usingSpectrum = false;
-
 playerUsingRadio = {
   !(tfar_core_currentTransmittingRadio isEqualTo [])
 };
