@@ -3,7 +3,6 @@ Returns a signal strength modifier (0-1) based on player distance, direction and
 */
 
 params ["_object", "_isLR"];
-_object = balls;
 
 private _range = player distance _object;
 if (_range > ew_signalMaxRange) exitWith {0};
