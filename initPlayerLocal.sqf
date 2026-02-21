@@ -15,6 +15,6 @@ getFrequency = {
   parseNumber _currentFrequency
 };
 
-ew_objects = [[balls, 250, true], [balls2, 350, false], [balls3, 550, false]];
+ew_objects = [[balls, 250, true]];
 
 call ew_fnc_init;

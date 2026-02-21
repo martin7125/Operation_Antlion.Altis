@@ -29,6 +29,7 @@ intensity = 0.1;
 
 player addBackpack "B_AssaultPack_ocamo";
 player linkItem "itemmap";
+player addWeapon "hgun_esd_01_antenna_02_F";
 
 while {true} do {
   if (getConnectedUAV player isEqualTo objNull && !(isRemoteControlling player)) then {_ppGrain ppEffectEnable false; 0 fadesound 1; continue};

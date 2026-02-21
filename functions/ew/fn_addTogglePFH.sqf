@@ -9,5 +9,3 @@ ew_togglePFH = [{
     if (ew_usingSpectrum) then {false call ew_fnc_spectrumDisplay};
   };
 }, 1] call CBA_fnc_addPerFrameHandler;
-
-true

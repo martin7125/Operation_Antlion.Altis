@@ -1,11 +1,14 @@
 ew_signalStrengthLR = 47; //Strength of LR radio (db)
 ew_signalStrengthSW = 37; //Strength of SW radio (db)
 ew_signalMaxRange = 5000; //Range at which signal strength will be 0 - follows a linear falloff (m)
+ew_maxTerrainDepth = 20; //Average terrain depth between player and emitting object where signal strength will be 0 (m)
 ew_usingSpectrum = false;
 
+//Frequency range of device
 missionNamespace setVariable ["#EM_FMin", 0];
 missionNamespace setVariable ["#EM_FMax", 600];
 
+//Signal range of device (db)
 missionNamespace setVariable ["#EM_SMin", 0];
 missionNamespace setVariable ["#EM_SMax", 50];
 

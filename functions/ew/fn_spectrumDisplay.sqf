@@ -18,7 +18,7 @@ ew_setEMValuesPFH = [{
     if (_signalStrength == 0) then {continue};
 
     _ew_array pushBack _frequency;
-    _ew_array pushBack _signalStrength;
+    _ew_array pushBack round _signalStrength;
   } forEach ew_objects;
 
   missionNamespace setVariable ["#EM_Values", _ew_array];

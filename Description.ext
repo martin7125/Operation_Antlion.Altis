@@ -11,6 +11,9 @@ class cfgFunctions {
             class spectrumDisplay {};
             class getSignalStrength {};
             class init {};
+            class getRangeMod {};
+            class getDirectionMod {};
+            class getTerrainMod {};
         };
     };
 };
