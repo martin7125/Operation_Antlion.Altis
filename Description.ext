@@ -14,6 +14,7 @@ class cfgFunctions {
             class getRangeMod {};
             class getDirectionMod {};
             class getTerrainMod {};
+            class terrainDiag {};
         };
     };
 };

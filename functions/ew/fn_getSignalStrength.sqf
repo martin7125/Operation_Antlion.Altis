@@ -9,7 +9,7 @@ private _baseStrength = if (_isLR) then {ew_signalStrengthLR} else {ew_signalStr
 private _range = player distance _object;
 if (_range > ew_signalMaxRange) exitWith {0};
 
-private _rangeMod = [_object, _range] call ew_fnc_getRangeMod;
+private _rangeMod = _range call ew_fnc_getRangeMod;
 private _directionMod = _object call ew_fnc_getDirectionMod;
 private _terrainMod = _object call ew_fnc_getTerrainMod;
 

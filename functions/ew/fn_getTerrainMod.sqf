@@ -1,12 +1,13 @@
-params ["_object"];
+params ["_object", "_diagPos"];
 
-//Terrain mod
 private _lineStart = eyepos player;
 private _lineEnd = eyepos _object;
 private _samples = 50;
 private _depthTotal = 0;
 private _averageDepth = 0;
 private _terrainMod = 1;
+
+if (!isNil "_diagPos") then {_lineStart = _diagPos};
 
 //Sample positions between player and target object
 for "_i" from 1 to _samples do {
@@ -29,6 +30,6 @@ for "_i" from 1 to _samples do {
 
 _averageDepth = _depthTotal / _samples;
 
-_terrainMod = 1 - (linearConversion [0,ew_maxTerrainDepth,_averageDepth,0,1,true]);
+_terrainMod = 1 - (linearConversion [0, ew_maxTerrainDepth, _averageDepth, 0, 1, true]);
 
 _terrainMod
