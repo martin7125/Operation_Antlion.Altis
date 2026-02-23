@@ -4,10 +4,11 @@ respawnDelay = 60;
 showGPS = 0;
 disabledAI = 1;
 
+allowFunctionsRecompile = 1;
+
 class cfgFunctions {
     class EW {
         class EW {
-            class addTogglePFH {};
             class spectrumDisplay {};
             class getSignalStrength {};
             class init {};
@@ -15,6 +16,11 @@ class cfgFunctions {
             class getDirectionMod {};
             class getTerrainMod {};
             class terrainDiag {};
+            class getActiveFrequency {};
+            class getBaseStrength {};
+            class playerUsingRadio {};
+            class clientRadio {};
+            class isLR {};
         };
     };
 };

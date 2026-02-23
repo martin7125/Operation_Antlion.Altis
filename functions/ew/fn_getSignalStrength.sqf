@@ -2,9 +2,7 @@
 Returns a signal strength modifier (0-1) based on player distance, direction and terrain occlusion to the emitting object.
 */
 
-params ["_object", "_isLR"];
-
-private _baseStrength = if (_isLR) then {ew_signalStrengthLR} else {ew_signalStrengthSW};
+params ["_object", "_baseStrength"];
 
 private _range = player distance _object;
 if (_range > ew_signalMaxRange) exitWith {0};

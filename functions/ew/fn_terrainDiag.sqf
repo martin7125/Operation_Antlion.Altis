@@ -18,7 +18,7 @@ private _yEnd = (_pos select 1) + _range;
 
 for "_x" from _xStart to (_xEnd - _gridSize) step _gridSize do {
     for "_y" from _yStart to (_yEnd - _gridSize) step _gridSize do {
-        // Only place markers if the grid square's center is within the circular range
+        // Only place markers if the grid square's center is within range
         private _centerX = _x + _gridSize/2;
         private _centerY = _y + _gridSize/2;
         private _dist = sqrt(((_centerX - (_pos select 0))^2) + ((_centerY - (_pos select 1))^2));

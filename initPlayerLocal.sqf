@@ -1,20 +1,7 @@
-playerUsingRadio = {
-  !(tfar_core_currentTransmittingRadio isEqualTo [])
-};
-
 //tfar_core_currentTransmittingRadio
 //TF_tangent_lr_pressed
 //call TFAR_fnc_onLRTangentPressed;
 
-getFrequency = {
-  if (isNil {call TFAR_fnc_activeLrRadio}) exitWith {};
-
-  _radio = call TFAR_fnc_activeLrRadio;
-  _channel = _radio call TFAR_fnc_getLrChannel;
-  _currentFrequency = [_radio, _channel + 1] call TFAR_fnc_getChannelFrequency;
-  parseNumber _currentFrequency
-};
-
-ew_objects = [[balls, 250, true]];
+ew_objects = [[balls, 250, 47]];
 
 call ew_fnc_init;

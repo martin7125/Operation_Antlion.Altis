@@ -12,8 +12,8 @@ ew_setEMValuesPFH = [{
   {
     private _object = _x select 0;
     private _frequency = _x select 1;
-    private _isLR = _x select 2;
-    private _signalStrength = [_object, _isLR] call ew_fnc_getSignalStrength;
+    private _baseStrength = _x select 2;
+    private _signalStrength = [_object, _baseStrength] call ew_fnc_getSignalStrength;
 
     if (_signalStrength == 0) then {continue};
 
