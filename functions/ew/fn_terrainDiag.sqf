@@ -10,7 +10,7 @@ if (!canSuspend) exitWith {hint "Function must be called via spawn"};
 private _radius = _range;
 private _gridSize = 100;
 
-private _pos = getPosASL _object;
+private _pos = eyepos _object;
 private _xStart = (_pos select 0) - _range;
 private _yStart = (_pos select 1) - _range;
 private _xEnd = (_pos select 0) + _range;

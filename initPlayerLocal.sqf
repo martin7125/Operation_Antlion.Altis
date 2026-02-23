@@ -2,6 +2,6 @@
 //TF_tangent_lr_pressed
 //call TFAR_fnc_onLRTangentPressed;
 
-ew_objects = [[balls, 250, 47]];
+ew_emittingObjects = [[balls, 250, 47], [balls2, 500, 37], [balls3, 150, 37]];
 
 call ew_fnc_init;
