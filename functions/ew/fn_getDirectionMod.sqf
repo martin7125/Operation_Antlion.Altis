@@ -1,5 +1,6 @@
 params ["_object"];
 
-private _directionMod = (abs ((player getRelDir _object) - 180) / 180) ^ 3.5;
+private _exp = 4; //Higher = tighter angle
+private _directionMod = (abs ((player getRelDir _object) - 180) / 180) ^ _exp;
 
 _directionMod

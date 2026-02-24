@@ -1,5 +1,5 @@
 /*
-Returns a signal strength modifier (0-1) based on player distance, direction and terrain occlusion to the emitting object.
+Returns signal strength based on player distance, direction and terrain occlusion to the emitting object.
 */
 
 params ["_object", "_baseStrength"];

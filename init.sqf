@@ -27,11 +27,12 @@ int2 = 1;
 mono = 0;
 intensity = 0.1;
 
-player addBackpack "TFAR_rt1523g";
+player addBackpack "TFAR_rt1523g_big";
 player linkItem "itemmap";
 player addWeapon "hgun_esd_01_antenna_02_F";
 player linkItem "TFAR_anprc152";
 
+/*
 while {true} do {
   if (getConnectedUAV player isEqualTo objNull && !(isRemoteControlling player)) then {_ppGrain ppEffectEnable false; 0 fadesound 1; continue};
 

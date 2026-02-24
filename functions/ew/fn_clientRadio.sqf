@@ -6,7 +6,6 @@ private _frequency = _isLR call ew_fnc_getActiveFrequency;
 private _baseStrength = _isLR call ew_fnc_getBaseStrength;
 
 player setVariable ["ew_emitting", [_frequency, _baseStrength], true];
-asshat = asshat + 1;
 
 [{!(call ew_fnc_playerUsingRadio)}, {
   player setVariable ["ew_emitting", nil, true];
