@@ -4,6 +4,12 @@ ew_signalMaxRange = 4000; //Range at which signal strength will be 0 - follows a
 ew_maxTerrainDepth = 10; //Average terrain depth between player and emitting object where signal strength will be 0 (m) -- Default: 15
 
 ew_usingSpectrum = false;
+ew_batteryTimerCapacity = 120;
+ew_batteryTimerRecharge = 600;
+ew_batteryCharge = 100;
+ew_objects = [];
+
+ew_namespace = false call CBA_fnc_createNamespace;
 
 //Frequency range of device
 missionNamespace setVariable ["#EM_FMin", 0];
@@ -20,14 +26,10 @@ missionNamespace setVariable ["#EM_SelMax", 18];
 
 //Handle Spectrum Device display
 ew_spectrumPFH = [{
-  if (currentWeapon player == "hgun_esd_01_antenna_02_F") then {
-    if (!ew_usingSpectrum) then {true call ew_fnc_spectrumDisplay};
-  } else {
-    if (ew_usingSpectrum) then {false call ew_fnc_spectrumDisplay};
-  };
-}, 1] call CBA_fnc_addPerFrameHandler;
+  if (call ew_fnc_playerUsingSpectrum) then {call ew_fnc_spectrum};
+}, 2] call CBA_fnc_addPerFrameHandler;
 
 //Handle radio updates
 ew_radioPFH = [{
-  if (call ew_fnc_playerUsingRadio) then {call ew_fnc_clientRadio};
-}] call CBA_fnc_addPerFrameHandler;
+  if (call ew_fnc_playerUsingRadio) then {call ew_fnc_radio};
+}, 0.05] call CBA_fnc_addPerFrameHandler;

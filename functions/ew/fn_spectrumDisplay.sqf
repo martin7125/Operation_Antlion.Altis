@@ -4,10 +4,16 @@ Creates and maintains the array used by the Spectrum Device for display.
 
 params ["_on"];
 
-if (!_on) exitWith {ew_setEMValuesPFH call CBA_fnc_removePerFrameHandler; ew_usingSpectrum = false};
+if (!_on) exitWith {ew_setEMValuesPFH call CBA_fnc_removePerFrameHandler};
 
 ew_setEMValuesPFH = [{
   private _ewValues = [];
+  private _timeSinceLastExec = time - (ew_namespace getVariable ["ew_fnc_spectrumObjects_lastExec", 0]);
+
+  if (_timeSinceLastExec > 5) then {
+    ew_objects = (allPlayers - [player]) + ew_emittingObjects;
+    ew_namespace setVariable ["ew_fnc_spectrumObjects_lastExec", time];
+  };
 
   {
     private _object = _x;
@@ -32,11 +38,9 @@ ew_setEMValuesPFH = [{
 
     _ewValues pushBack _frequency;
     _ewValues pushBack round _signalStrength;
-  } forEach (allPlayers - [player]) + ew_emittingObjects;
+  } forEach ew_objects;
 
   missionNamespace setVariable ["#EM_Values", _ewValues];
 
   hint format ["%1", daytime];
 }, 0.1] call CBA_fnc_addPerFrameHandler;
-
-ew_usingSpectrum = true;
