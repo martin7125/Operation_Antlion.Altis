@@ -9,7 +9,8 @@ ew_batteryPFH = [{
   _this select 0 params ["_discharge", "_recharge"];
 
   private _timeSinceLastExec = time - (ew_namespace getVariable ["ew_fnc_spectrumBattery_lastExec", 0]);
-  private _usingSpectrumSight = (cameraView == "GUNNER");
+  private _display = uiNamespace getVariable ["RscWeaponSpectrumAnalyzerGeneric", displayNull];
+  private _usingSpectrumSight = _display getVariable ["bin_isgunner", false];
 
   if (_usingSpectrumSight && _timeSinceLastExec < 5) then {
     ew_batteryCharge = ew_batteryCharge - (_discharge * _timeSinceLastExec);

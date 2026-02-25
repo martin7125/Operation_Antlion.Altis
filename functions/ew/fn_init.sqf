@@ -4,8 +4,8 @@ ew_signalMaxRange = 4000; //Range at which signal strength will be 0 - follows a
 ew_maxTerrainDepth = 10; //Average terrain depth between player and emitting object where signal strength will be 0 (m) -- Default: 15
 
 ew_usingSpectrum = false;
-ew_batteryTimerCapacity = 120;
-ew_batteryTimerRecharge = 600;
+ew_batteryTimerCapacity = 120; //Total battery capacity for spectrum device (seconds)
+ew_batteryTimerRecharge = 600; //Time it takes for spectrum device to recharge from empty (seconds)
 ew_batteryCharge = 100;
 ew_objects = [];
 
