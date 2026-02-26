@@ -11,4 +11,4 @@ private _rangeMod = _range call ew_fnc_getRangeMod;
 private _directionMod = _object call ew_fnc_getDirectionMod;
 private _terrainMod = _object call ew_fnc_getTerrainMod;
 
-_baseStrength * _rangeMod * _directionMod * _terrainMod
+(_baseStrength * _rangeMod * _directionMod * _terrainMod) max 0

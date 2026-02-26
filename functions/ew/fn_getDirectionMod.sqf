@@ -12,6 +12,6 @@ if (_camDir < 0) then {_camDir = _camDir + 360};
 private _relDir = (((_camDir - (player getDir _object)) + 540) % 360) - 180;
 
 private _exp = 4.5; //Higher = tighter angle
-private _directionMod = ((1 - (abs _relDir / 180)) max 0) ^ _exp;
+private _directionMod = (1 - (abs _relDir / 180)) ^ _exp;
 
 _directionMod
