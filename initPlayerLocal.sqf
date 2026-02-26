@@ -4,4 +4,6 @@
 
 ew_emittingObjects = [[balls, 250, 47], [balls2, 500, 37], [balls3, 150, 37]];
 
+setTerrainGrid 5;
+
 call ew_fnc_init;

@@ -9,21 +9,19 @@ allowFunctionsRecompile = 1;
 class cfgFunctions {
     class EW {
         class EW {
-            class spectrumDisplay {};
-            class getSignalStrength {};
             class init {};
             class getRangeMod {};
             class getDirectionMod {};
             class getTerrainMod {};
+            class getSignalStrength {};
             class terrainDiag {};
+            class radio {};
             class getActiveFrequency {};
             class getBaseStrength {};
-            class playerUsingRadio {};
-            class radio {};
-            class isLR {};
-            class spectrumBattery {};
-            class playerUsingSpectrum {};
             class spectrum {};
+            class playerUsingSpectrum {};
+            class spectrumDisplay {};
+            class spectrumBattery {};
         };
     };
 };

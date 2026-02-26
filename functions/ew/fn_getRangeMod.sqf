@@ -1,3 +1,7 @@
+/*
+Returns linear range modification
+*/
+
 params ["_range"];
 
 private _rangeMod = -(_range / ew_signalMaxRange) + 1;

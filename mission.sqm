@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=743;
+		nextID=803;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3408.519,44.506451,11643.811};
-		dir[]={-0.0019620273,-0.36522564,0.93091702};
-		up[]={-0.00076975836,0.93091905,0.36522487};
-		aside[]={0.99999785,5.8207661e-11,0.002107624};
+		pos[]={3391.4976,14.284879,11740.611};
+		dir[]={-0.45762777,-0.44617596,-0.76912159};
+		up[]={-0.22814706,0.89494306,-0.38344005};
+		aside[]={-0.85939991,-1.8556602e-07,0.51134211};
 	};
 };
 binarizationWanted=0;
@@ -41,13 +41,16 @@ addons[]=
 	"ace_explosives",
 	"A3_Props_F_Enoch_Military_Camps",
 	"A3_Modules_F_Curator_Curator",
-	"A3_Props_F_Enoch_Military_Equipment"
+	"A3_Props_F_Enoch_Military_Equipment",
+	"rhs_c_t72",
+	"jsrs2025_compat_rhs_afrf",
+	"ace_compat_rhs_afrf3"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=7;
+		items=9;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -97,13 +100,28 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item7
+		{
+			className="rhs_c_t72";
+			name="T-72 Series Tanks";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item8
+		{
+			className="ace_compat_rhs_afrf3";
+			name="ACE3 - RHS AFRF Compatibility";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
 	};
 };
 dlcs[]=
 {
 	"Mark",
 	"Expansion",
-	"Contact"
+	"Contact",
+	"RHS_AFRF"
 };
 randomSeed=16604087;
 class ScenarioData
@@ -134,7 +152,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=19;
+		items=18;
 		class Item0
 		{
 			dataType="Marker";
@@ -291,38 +309,6 @@ class Mission
 		};
 		class Item6
 		{
-			dataType="Trigger";
-			position[]={8647.4063,183.57368,18357.871};
-			angle=2.9034235;
-			class Attributes
-			{
-				name="objective_1_1";
-				sizeA=38;
-				sizeB=57;
-				isRectangle=1;
-			};
-			id=412;
-			type="EmptyDetectorAreaR50";
-			atlOffset=7.0079956;
-		};
-		class Item7
-		{
-			dataType="Trigger";
-			position[]={20195.85,68.02504,11711.466};
-			angle=5.6531358;
-			class Attributes
-			{
-				name="objective_2_1";
-				sizeA=37;
-				sizeB=26;
-				isRectangle=1;
-			};
-			id=413;
-			type="EmptyDetectorAreaR50";
-			atlOffset=26.590755;
-		};
-		class Item8
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -366,13 +352,13 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item9
+		class Item7
 		{
 			dataType="Group";
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -385,7 +371,6 @@ class Mission
 					class Attributes
 					{
 						description="Commander";
-						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -475,6 +460,57 @@ class Mission
 						nAttributes=2;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3401.0151,3.1375005,11717.585};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Medic";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=766;
+					type="B_medic_F";
+					atlOffset=0.044308186;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
 			};
 			class Attributes
 			{
@@ -482,7 +518,7 @@ class Mission
 			id=706;
 			atlOffset=0.11500001;
 		};
-		class Item10
+		class Item8
 		{
 			dataType="Group";
 			side="West";
@@ -916,7 +952,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item11
+		class Item9
 		{
 			dataType="Object";
 			class PositionInfo
@@ -932,7 +968,7 @@ class Mission
 			id=718;
 			type="SatelliteAntenna_01_Black_F";
 		};
-		class Item12
+		class Item10
 		{
 			dataType="Object";
 			class PositionInfo
@@ -949,7 +985,7 @@ class Mission
 			type="SatelliteAntenna_01_Black_F";
 			atlOffset=-0.0050001144;
 		};
-		class Item13
+		class Item11
 		{
 			dataType="Object";
 			class PositionInfo
@@ -966,7 +1002,7 @@ class Mission
 			type="SatelliteAntenna_01_Black_F";
 			atlOffset=-0.01896286;
 		};
-		class Item14
+		class Item12
 		{
 			dataType="Marker";
 			position[]={3821.856,9.7917576,11452.069};
@@ -974,7 +1010,7 @@ class Mission
 			type="mil_flag";
 			id=721;
 		};
-		class Item15
+		class Item13
 		{
 			dataType="Marker";
 			position[]={3403.8982,16.519642,11854.589};
@@ -982,7 +1018,7 @@ class Mission
 			type="mil_flag";
 			id=722;
 		};
-		class Item16
+		class Item14
 		{
 			dataType="Marker";
 			position[]={4173.6465,52.687286,11793.937};
@@ -990,7 +1026,7 @@ class Mission
 			type="mil_flag";
 			id=723;
 		};
-		class Item17
+		class Item15
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -1056,7 +1092,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item18
+		class Item16
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1071,6 +1107,25 @@ class Mission
 			id=741;
 			type="OmniDirectionalAntenna_01_black_F";
 			atlOffset=-3.8146973e-06;
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3381.3816,5.2168045,11725.325};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=802;
+			type="rhs_t90_tv";
+			atlOffset=-1.9550323e-05;
 		};
 	};
 };

@@ -4,7 +4,7 @@ ew_signalMaxRange = 4000; //Range at which signal strength will be 0 - follows a
 ew_maxTerrainDepth = 10; //Average terrain depth between player and emitting object where signal strength will be 0 (m) -- Default: 15
 
 ew_usingSpectrum = false;
-ew_batteryTimerCapacity = 120; //Total battery capacity for spectrum device (seconds)
+ew_batteryTimerCapacity = 180; //Total battery capacity for spectrum device (seconds)
 ew_batteryTimerRecharge = 600; //Time it takes for spectrum device to recharge from empty (seconds)
 ew_batteryCharge = 100;
 ew_objects = [];
@@ -30,6 +30,8 @@ ew_spectrumPFH = [{
 }, 2] call CBA_fnc_addPerFrameHandler;
 
 //Handle radio updates
-ew_radioPFH = [{
-  if (call ew_fnc_playerUsingRadio) then {call ew_fnc_radio};
-}, 0.05] call CBA_fnc_addPerFrameHandler;
+["TFAR_event_OnTangent", {
+  params ["_unit", "_radio", "_type", "_isAdditional", "_start"];
+
+  [_radio, _start, _type] call ew_fnc_radio;
+}] call CBA_fnc_addEventHandler;

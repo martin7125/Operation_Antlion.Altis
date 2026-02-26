@@ -1,3 +1,7 @@
+/*
+Calculates average terrain depth between object and player and converts into ratio based on ew_maxTerrainDepth
+*/
+
 params ["_object", "_diagPos"];
 
 private _lineStart = eyepos player;
@@ -22,7 +26,7 @@ for "_i" from 1 to _samples do {
   private _zPos = _pos select 2;
   private _depth = _terrainHeight - _zPos;
 
-  //If sample point is below terrain, add to the total
+  //If sample point is below terrain, add depth to the total
   if (_depth > 0) then {
     _depthTotal = _depthTotal + _depth;
   };

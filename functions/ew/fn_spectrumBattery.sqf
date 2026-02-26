@@ -1,3 +1,7 @@
+/*
+Creates a battery system for the spectrum device
+*/
+
 params ["_on"];
 
 if (!_on) exitWith {ew_batteryPFH call CBA_fnc_removePerFrameHandler};
