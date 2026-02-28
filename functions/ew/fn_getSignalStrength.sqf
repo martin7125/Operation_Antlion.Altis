@@ -10,5 +10,6 @@ if (_range > ew_signalMaxRange) exitWith {0};
 private _rangeMod = _range call ew_fnc_getRangeMod;
 private _directionMod = _object call ew_fnc_getDirectionMod;
 private _terrainMod = _object call ew_fnc_getTerrainMod;
+private _objectsMod = _object call ew_fnc_getObjectsMod;
 
-(_baseStrength * _rangeMod * _directionMod * _terrainMod) max 0
+(_baseStrength * _rangeMod * _directionMod * _terrainMod * _objectsMod) max 0

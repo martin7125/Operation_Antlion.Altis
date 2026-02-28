@@ -27,3 +27,7 @@ ew_batteryPFH = [{
   missionNamespace setVariable ["#EM_Progress", ew_batteryCharge / 100];
   ew_namespace setVariable ["ew_fnc_spectrumBattery_lastExec", time];
 }, 0.25, [_discharge, _recharge]] call CBA_fnc_addPerFrameHandler;
+
+if (isNil "ew_batteryRespawnEH") then {
+  ew_batteryRespawnEH = player addEventHandler ["Respawn", {ew_batteryCharge = 100}];
+};

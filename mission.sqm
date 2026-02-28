@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3394.2712,44.097767,11651.378};
-		dir[]={0.11218076,-0.33657542,0.93495232};
-		up[]={0.040096946,0.94165689,0.33417955};
-		aside[]={0.99288005,-1.3387762e-09,-0.11913133};
+		pos[]={4170.4868,85.744865,11756.135};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -987,26 +987,83 @@ class Mission
 		class Item12
 		{
 			dataType="Marker";
-			position[]={3821.856,9.7917576,11452.069};
+			position[]={3821.856,9.7919998,11452.07};
 			name="marker_16";
+			text="500";
 			type="mil_flag";
 			id=721;
+			atlOffset=0.00021743774;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item13
 		{
 			dataType="Marker";
-			position[]={3403.8982,16.519642,11854.589};
+			position[]={3403.8979,16.52,11854.589};
 			name="marker_17";
+			text="250";
 			type="mil_flag";
 			id=722;
+			atlOffset=0.0003528595;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item14
 		{
 			dataType="Marker";
-			position[]={4173.6465,52.687286,11793.937};
+			position[]={4173.646,52.687,11793.937};
 			name="marker_18";
+			text="150";
 			type="mil_flag";
 			id=723;
+			atlOffset=-0.00026321411;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerShape";
+					expression="if (_value != 'NONE' && isServer) then {_this setMarkerShape _value}";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="NONE";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item15
 		{

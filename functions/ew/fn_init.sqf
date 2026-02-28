@@ -1,6 +1,6 @@
 ew_signalStrengthLR = 47; //Strength of LR radio (db)
 ew_signalStrengthSW = 37; //Strength of SW radio (db)
-ew_signalMaxRange = 4000; //Range at which signal strength will be 0 - follows a linear falloff (m)
+ew_signalMaxRange = 4500; //Range at which signal strength will be 0 - follows a linear falloff (m)
 ew_maxTerrainDepth = 10; //Average terrain depth between player and emitting object where signal strength will be 0 (m) -- Default: 15
 
 ew_usingSpectrum = false;
