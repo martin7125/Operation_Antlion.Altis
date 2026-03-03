@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=803;
+		nextID=805;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4170.4868,85.744865,11756.135};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={8556.1143,618.61945,17694.045};
+		dir[]={0.095630266,-0.7750057,0.62467676};
+		up[]={0.11727748,0.63195419,0.76608086};
+		aside[]={0.98848414,0,-0.15132466};
 	};
 };
 binarizationWanted=0;
@@ -139,7 +139,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={8628.7354,258.681,18275.266};
-			name="objective_1_keepout";
+			name="objective_2_keepout";
 			markerType="ELLIPSE";
 			type="";
 			fillName="SolidBorder";
@@ -169,8 +169,8 @@ class Mission
 		class Item1
 		{
 			dataType="Marker";
-			position[]={20206.43,0,11668.171};
-			name="objective_2_keepout";
+			position[]={18087.156,11.105,15233.035};
+			name="objective_1_keepout";
 			markerType="ELLIPSE";
 			type="";
 			fillName="SolidBorder";
@@ -178,7 +178,7 @@ class Mission
 			b=1500;
 			drawBorder=1;
 			id=28;
-			atlOffset=-49.925114;
+			atlOffset=-13.786373;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -266,7 +266,7 @@ class Mission
 			angle=1.1557389;
 			class Attributes
 			{
-				name="objective_1";
+				name="objective_2";
 				sizeA=350;
 				sizeB=350;
 			};
@@ -277,17 +277,17 @@ class Mission
 		class Item5
 		{
 			dataType="Trigger";
-			position[]={20233.775,50.622437,11690.969};
+			position[]={18095.766,61.728016,15255.021};
 			angle=1.0166718;
 			class Attributes
 			{
-				name="objective_2";
+				name="objective_1";
 				sizeA=350;
 				sizeB=350;
 			};
 			id=43;
 			type="EmptyDetectorAreaR50";
-			atlOffset=3.8146973e-06;
+			atlOffset=36.654999;
 		};
 		class Item6
 		{

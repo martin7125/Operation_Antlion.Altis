@@ -24,6 +24,6 @@ private _intersectionSurfaces = lineIntersectsSurfaces [_startPos, _endPos, play
   };
 } forEach _intersectionSurfaces;
 
-private _objectMod = _attenuation ^ _intersections;
+private _objectsMod = _attenuation ^ _intersections;
 
-_objectMod
+_objectsMod

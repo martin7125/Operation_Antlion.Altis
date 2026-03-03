@@ -5,6 +5,7 @@ showGPS = 0;
 disabledAI = 1;
 
 allowFunctionsRecompile = 1;
+enableDebugConsole = 2;
 
 class cfgFunctions {
     class EW {
@@ -13,6 +14,7 @@ class cfgFunctions {
             class getRangeMod {};
             class getDirectionMod {};
             class getTerrainMod {};
+            class getObjectsMod {};
             class getSignalStrength {};
             class terrainDiag {};
             class radio {};
@@ -22,7 +24,17 @@ class cfgFunctions {
             class playerUsingSpectrum {};
             class spectrumDisplay {};
             class spectrumBattery {};
-            class getObjectsMod {};
+        };
+    };
+
+    class M {
+        class Sector {
+            class sector_init {};
+            class getSectorStatus {};
+            class setSectorStatus {};
+            class createTask {};
+            class createObjective {};
+            class sequenceTasks {};
         };
     };
 };
