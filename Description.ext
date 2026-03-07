@@ -32,9 +32,7 @@ class cfgFunctions {
             class sector_init {};
             class getSectorStatus {};
             class setSectorStatus {};
-            class createTask {};
             class createObjective {};
-            class sequenceTasks {};
         };
     };
 };
