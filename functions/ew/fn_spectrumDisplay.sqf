@@ -42,5 +42,5 @@ ew_setEMValuesPFH = [{
 
   missionNamespace setVariable ["#EM_Values", _ewValues];
 
-  hint format ["%1", daytime];
+  hintSilent format ["%1", daytime];
 }, 0.1] call CBA_fnc_addPerFrameHandler;
