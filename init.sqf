@@ -14,6 +14,9 @@ player addBackpack "TFAR_rt1523g_big";
 player linkItem "itemmap";
 player addWeapon "hgun_esd_01_antenna_02_F";
 player linkItem "TFAR_anprc152";
+player linkItem "B_UavTerminal";
+player addItem "MTweaks_AR2_Item";
+player addMagazine "MTweaks_UAVBattery";
 
 /*
 while {true} do {

@@ -1,5 +1,5 @@
 /*
-Returns signal modifier for building wall and rock intersections
+Returns signal modifier for building, wall, and rock intersections
 */
 
 params ["_object"];
